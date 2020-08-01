@@ -32,70 +32,58 @@
       </div> 
     </div>
 
-    <!-- INFORMACION PERSONAL -->
-    <div v-if="information == 1" class="panelmain_information">
-      <div class="info1_container">
-        <div class="info1_container_description">
-          <label class="info1_label">Nombre</label>
-          <h3 class="info1_text">Kevin Rangel</h3>
-        </div>
-        <div class="info1_container_description">
-          <label class="info1_label">Estudios</label>
-          <h3 class="info1_text">Desarrollador Web / Ing Sistemas</h3>
-        </div>
-        <div class="info1_container_description">
-          <label class="info1_label">Edad</label>
-          <h3 class="info1_text">26 años</h3>
-        </div>
-        <div class="info1_container_description">
-          <label class="info1_label">Ubicacion</label>
-          <h3 class="info1_text">Venezuela</h3>
-        </div>
-        <div class="info1_container_description">
-          <label class="info1_label">Número de telefono</label>
-          <h3 class="info1_text">+54 4248644310</h3>
-        </div>
-        <div class="info1_container_description">
-          <label class="info1_label">Correo electronico</label>
-          <h3 class="info1_text">krangel107@gmail.com</h3>
-        </div>
-        <div class="info1_container_description">
-          <label class="info1_label">Sobre mí</label>
-          <h3 class="info1_text">Soy desarrollador web con 1 año de experiencia desarrollando aplicaciones web escalables con tecnología de punta. Tengo hábiles conocimientos en el manejo de distintas herramientas en el ámbito del desarrollo Frontend y conocimientos básicos en el desarrollo por parte del servidor con php y Mysql .Me exijo constantemente en el aprendizaje de nuevas tecnologías por el gusto a programar</h3>
-        </div>
-      </div>
+    <div class="panelmain_information">
+      <div class="example-3d">
+    <swiper class="swiper" :options="swiperOption">
+      <swiper-slide>
+
+      </swiper-slide>
+      <swiper-slide></swiper-slide>
+      <swiper-slide></swiper-slide>
+      <swiper-slide>Slide 4</swiper-slide>
+      <swiper-slide>Slide 5</swiper-slide>
+      <swiper-slide>Slide 6</swiper-slide>
+      <swiper-slide>Slide 7</swiper-slide>
+      <div class="swiper-pagination" slot="pagination"></div>
+    </swiper>
+  </div>
     </div>
-    <!-- TENCOLOGIAS -->
-    <div v-if="information == 2" class="panelmain_information">
-      
-    </div>
-    <!-- PORTAFOLIO -->
-    <div v-if="information == 3" class="panelmain_information">
-      <div class="panel_information_proyects">
-        <ProyectContainer
-        v-for="number in [0,1,2,3,4]"
-        />
-      </div>
-      
-    </div>
+    
   </div>
 </template>
 
 <script>
 // import NavHeader from '@/components/NavHeader.vue'
-import ProyectContainer from '@/components/ProyectContainer.vue'
-
 export default {
-  name: 'PanelMain',
+  name: 'PanelMainProyect',
   components: {
-    ProyectContainer
+
   },
   props: {
     msg: String
   },
   data(){
     return {
-      information: 1
+      information: 0,
+     swiperOption: {
+
+       effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      initialSlide: 1,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+        
+      },
     }
   },
   methods:{
@@ -113,6 +101,21 @@ export default {
 </script>
 
 <style scoped>
+
+ .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+      background: red
+
+    }
 	.panelmain{
     widows: 100%;
     height: 100vh;
@@ -221,22 +224,6 @@ export default {
     margin-bottom: 20px;
     width: 50%;
   }
-  .info1_container{
-    padding: 5%;
-    overflow: auto;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .info1_label{
-    color: gold;
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-bottom: 0;
-  }
-  .info1_text{
-    color: white;
-    font-size: 1.3rem;
-    font-weight: 300;
-  }
+  
 
 </style>

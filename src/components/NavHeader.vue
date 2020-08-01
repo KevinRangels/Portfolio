@@ -3,23 +3,17 @@
     <div class="nav_header_container mt-1">
       <ul class="m-0" style="list-style: none; display: flex; justify-content: space-between;">
         
-        <li class="nav_header_btn item tres">
-          <a href="https://www.instagram.com/kevinrangels/"  target="_blank">
-            <i class="fab fa-instagram lead  text-white" aria-hidden="true"></i>
+          <a href="https://www.instagram.com/kevinrangels/" class="nav_header_btn fab fa-instagram lead"  target="_blank">
           </a>
-        </li>
+        
 
-        <li class="nav_header_btn">
-          <a href="https://www.facebook.com/kevin.rangels" target="_blank" >
-            <i class="fab fa-facebook-f  text-white" aria-hidden="true"></i>
+          <a href="https://www.facebook.com/kevin.rangels" class="nav_header_btn fab fa-facebook-f  " target="_blank" >
           </a>
-        </li>
+        
 
-        <li class="nav_header_btn">
-          <a href="https://github.com/KevinRangels" target="_blank" >
-            <i class="fab fa-github  text-white " aria-hidden="true"></i>
+          <a href="https://github.com/KevinRangels" class="nav_header_btn fab fa-github " target="_blank" >
           </a>
-        </li>
+        
         <li class="text-white ml-4 mt-2">
           <a href="" class="header_menu_btn_lenguage">es</a> <span class="nav_header_btn_lenguage_div">|</span><a href="" class="header_menu_btn_lenguage">en</a>
         </li>
@@ -61,26 +55,26 @@ export default {
     margin-left: 10px;
     padding: 7px;
     border-radius: 198px 198px 198px 198px;
-  }
-  .nav_header_btn a i .fab.fa-instagram{
-  }
-  .nav_header_btn a i .fab.fa-facebook-f{
-  }
-  .nav_header_btn a i .fab.fa-github{
-  }
-  .nav_header_btn a i{
+    transition: 0.5s;
+    color: white;
+    transition: 0.8s;
     font-size: 26px;
   }
-  .nav_header_btn a {
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: -1px;
+  .nav_header_btn:hover{
+    border: 2px solid gold;
+    color: black;
+    background: gold;
   }
-  .header_menu_btn_lenguage{
+ .header_menu_btn_lenguage{
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
+    transition: 0.5s;
+  }
+  .header_menu_btn_lenguage:hover{
+    color: gold;
+    font-size: 20px;
   }
   .nav_header_btn_lenguage_div{
     margin-right: 5px;
@@ -89,29 +83,5 @@ export default {
   }
 
 
-/*  .item {
-  background-color: rgba(0,0,0,0.4);
-  line-height: 4;
-  padding: 0 2em;
-  margin:1.5em;
-  color: #fff;
-  position: relative;
-}*/
 
-.item:before {
-  
-  
-  transition: all .3s;
-}
-
-.item:hover:before {
-  border: 2px solid gold;
-}
-
-.tres:before {
-  left: 50%;
-}
-.tres:hover:before {
-  left:0;
-}
 </style>
