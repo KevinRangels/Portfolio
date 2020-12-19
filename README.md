@@ -1,19 +1,11 @@
-# portfolio
+# STATIC
 
-## Project setup
-```
-npm install
-```
+**This directory is not required, you can delete it if you don't want to use it.**
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+This directory contains your static files.
+Each file inside this directory is mapped to `/`.
+Thus you'd want to delete this README.md before deploying to production.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Example: `/static/robots.txt` is mapped as `/robots.txt`.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/assets#static).
